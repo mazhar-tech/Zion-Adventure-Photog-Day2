@@ -1,0 +1,518 @@
+
+.body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(205, 213, 213);
+}
+
+.container {
+  border: 5px solid;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,)
+}
+
+.logo {
+    text-align: center;
+    background-color: white;
+
+}
+
+.logo img {
+    width: 10rem;
+    height: 9rem;
+}
+
+
+.banner img {
+
+    width: 100%;
+    height: 100%;
+}
+
+/* for navbar */
+  h2 {
+    text-align: center;
+  }
+  .logo{
+    text-shadow: 2px 2px 4px #000000;
+    color:white;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d37c09;
+    color: #f3efeb;
+    height: 30px;
+    padding: 1em;
+    font-weight:bolder;
+    font-size:15px;
+   
+  }
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+   
+    
+  }
+  .menu li:hover{
+    color:white;
+    cursor:pointer;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  /*Container for menu button  */
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  /*  Creating the menu button */
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 6px;
+    width: 32px;
+    border-radius: 3px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  /*  Adding Functionality to the Hamburger Menu with CSS  */
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(45deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+  /*  transforms the hamburger icon into a cross  */
+    transform: rotate(-45deg);
+  }
+  
+  /* Making the navbar responsive by CSS Media Queries */
+  @media (max-width: 775px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 210px;
+      left: 50px;
+      flex-direction: column;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+      font-size: medium;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #9f9a9a;
+      height: 2.5em;
+      padding: 0.5em;
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: black;
+      background-color: #d0790f;
+      
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+   
+    }
+  }
+/* for 700px  */
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 258px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #9f9a9a;
+    height: 2.5em;
+    padding: 0.5em;
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width:85%;
+    color: black;
+    background-color: #d37c09;
+    
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+ 
+  }
+}
+
+
+/* end nvbar */
+/*  banner footer */
+.bannerfooter {
+    background-color: #d0790f;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    display: block;
+    padding: 14px 20px;
+}
+
+/* Base styles for larger screens */
+/* Base styles for larger screens */
+.WelcomeDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #b5570e;
+}
+
+.childDiv1 {
+  flex: 1;
+}
+
+.childDiv2 {
+  flex: 1;
+  padding: 0 20px;
+}
+.childDiv3 {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.childDiv1 img {
+  padding-left: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1000px) {
+  .WelcomeDiv {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .childDiv2 {
+    padding: 0 px;
+  }
+  .childDiv1 img{
+    padding: 0
+  }
+  .childDiv1 {
+    padding: 0 25px;
+  }
+  .childDiv3 {
+    width: 100%;
+  }
+
+  .childDiv1 img {
+      max-width: 100%; /* Make the image width 100% of its container */
+      height: auto;   /* Maintain aspect ratio */
+  }
+}
+/* top cat portion */
+.topCatHeading {
+    background-color: #ffffff;
+    color: #b5570e;
+    text-align: center;
+    margin-top: 0px;
+    display: block;
+    padding: 14px 20px;
+    font-weight: bold;
+}
+
+.catagory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff; 
+    
+}
+
+.catagory img {
+    background-size: cover;
+}
+@media (max-width: 576px) {
+  .catagory {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+.Heading {
+    background-color: #ffffff;
+    color: #b5570e;
+    text-align: center;
+    margin-top: 0px;
+    display: block;
+    padding: 14px 20px;
+    font-weight: bold;
+}
+
+.Heading h5 {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.Heading h1 {
+    margin-top: 2rem;
+}
+
+.CardPost {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.card {
+    width: 188px;
+    margin: 3px;
+    
+}
+
+.card-img {
+    background-size: cover;
+    height: 150px;
+    margin-bottom: 15px;
+    
+}
+.card h5,h6{
+    margin-top: 2%;
+    margin-bottom: 0%;
+    text-align:left ;
+    color: #b5570e;
+}
+.followon {
+  background-color: #ffffff;
+  color: #e7b758;
+  font-weight: 700;
+  font-size: x-large;
+  padding: 1rem 2rem; /* Adjust padding as needed */
+  text-align: center; /* Center the text */
+}
+
+.FolowImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 1rem; /* Add padding around images */
+}
+
+ul a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .followon {
+      font-size: large;
+  }
+  .FolowImg {
+      justify-content: center;
+  }
+  ul a {
+      text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .followon {
+      font-size: medium;
+      padding: 0.5rem;
+  }
+  .FolowImg {
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem;
+  }
+}
+
+/* Base styles for larger screens */
+.footerItems {
+  display: flex;
+  justify-content: center;
+  background-color: #d0790f;
+  color: white;
+}
+
+.ulList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.ulList ul {
+  list-style: none;
+}
+
+.ulList ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.buttonC {
+  width: 125px;
+  height: 30px;
+  color: #845a07;
+  font-weight: 700;
+  border: 2px solid white;
+  margin-top: 26px;
+}
+
+.vl {
+  border-left: 4px solid #ffffff;
+  height: 195px;
+  margin: 30px 10px;
+}
+
+.inputfields {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.fname, .email {
+  width: 22rem;
+  height: 1.4rem;
+  background-color: #d0790f;
+  border: 2px solid white;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+.fname::placeholder, .email::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.button {
+  width: 22.5rem;
+  margin-bottom: 10px;
+  height: 1.8rem;
+  color: #845a07;
+  font-weight: 900;
+  background-color: white;
+  border: 2px solid white;
+}
+
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .footerItems {
+      flex-direction: column;
+      align-items: center;
+  }
+  .vl {
+      display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .inputfields {
+      margin-top: 20px;
+  }
+  .buttonC, .button {
+      width: 100%;
+      margin: 15px 0;
+      
+  }
+  .fname, .email {
+    width: 18rem;
+    height: 1.4rem;
+    background-color: #d0790f;
+    border: 2px solid white;
+    outline: none;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.copyright{
+    background-color: #d0790f;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    display: block;
+    padding: 14px 20px;
+    font-size: smaller;
+}
